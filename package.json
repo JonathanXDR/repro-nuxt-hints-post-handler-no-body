@@ -1,0 +1,15 @@
+{
+  "name": "repro-nuxt-hints-post-handler-no-body",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "postinstall": "nuxi prepare",
+    "dev": "nuxi dev"
+  },
+  "devDependencies": {
+    "@nuxt/hints": "1.1.2",
+    "nuxt": "4.4.6",
+    "typescript": "~5.9.0",
+    "vue-tsc": "~3.0.0"
+  }
+}
