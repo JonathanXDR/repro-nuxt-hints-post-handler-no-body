@@ -62,15 +62,15 @@ function createHintsRouter() {
 ```
 
 A `preemptive: true` router would claim the request even when the handler
-returns nothing; alternatively the handler could `return null` (or `{}`) so
-h3 recognises the response.
+returns nothing. Alternatively the handler could `return null` (or `{}`)
+so h3 recognises the response.
 
 ## Related upstream activity
 
-- Open issue **[nuxt/hints#186](https://github.com/nuxt/hints/issues/186)** —
+- Open issue **[nuxt/hints#186](https://github.com/nuxt/hints/issues/186)**,
   same class of bug for the sibling `/__nuxt_hydration` POST endpoint
   (`FetchError: 400`). Confirms `nuxt-security` interaction.
-- Open PR **[nuxt/hints#342](https://github.com/nuxt/hints/pull/342)** —
+- Open PR **[nuxt/hints#342](https://github.com/nuxt/hints/pull/342)**,
   *fix: correct router registration*. Splits the registration out of
   `setupDevToolsUI()` and adds `preemptive: true` to the sub-router, which
   resolves the symptom this repro shows.
