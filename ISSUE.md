@@ -11,8 +11,6 @@
 
 https://stackblitz.com/github/JonathanXDR/repro-nuxt-hints-post-handler-no-body
 
-The StackBlitz `startCommand` runs `node reproduce.mjs`, which boots `nuxi dev`, POSTs a valid lazy-load payload to `/__nuxt_hints/lazy-load`, and prints the HTTP status plus the stored entries. The proof appears in the terminal.
-
 ### Describe the bug
 
 The dev-only `/__nuxt_hints/lazy-load` POST endpoint accepts and stores the payload, but the HTTP response is `404 Page not found`. The request falls through to Nuxt's page renderer instead of being treated as handled.
